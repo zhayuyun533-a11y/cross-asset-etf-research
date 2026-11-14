@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "etf-backtest"
+version = "0.2.0"
+description = "Compare ETF strategies from local prices and replay the original six-ETF study"
+requires-python = ">=3.11"
+dependencies = ["pandas==3.0.3", "numpy==2.4.6", "exchange-calendars==4.13.2"]
+
+[project.optional-dependencies]
+test = ["pytest==9.0.3"]
+plot = ["matplotlib==3.11.0"]
+
+[project.scripts]
+etf-backtest = "etf_backtest.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
