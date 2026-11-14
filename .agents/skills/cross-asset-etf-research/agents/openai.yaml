@@ -1,0 +1,4 @@
+interface:
+  display_name: "跨资产 ETF 策略研究助手"
+  short_description: "Compare historical ETF return and drawdown"
+  default_prompt: "用 $cross-asset-etf-research 跑合成示例，比较两组的年化收益、最大回撤和恢复情况。"
